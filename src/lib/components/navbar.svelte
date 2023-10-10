@@ -1,6 +1,8 @@
 <script>
     import logo from '$lib/assets/logoTransparent.png';
-    import {mixText} from '$lib/animations/textMixing.js';
+    import {mixText} from '$lib/modules/textMixing.js';
+    import navRoutes from '$lib/navRoutes.js';
+    import Navbar from "$lib/components/navbar.svelte";
 
     function handleMouseOver(event) {
         mixText(event.target);
@@ -11,15 +13,12 @@
     <a class="logo" href="/"><img src={logo} alt="logo Ulysse Guillot"></a>
 
     <ul class="nav-links">
-        <li><a class="nav-link" href="/competences" on:mouseover="{handleMouseOver}">Compétences</a></li>
-        /
-        <li><a class="nav-link" href="/formation" on:mouseover="{handleMouseOver}">Formation</a></li>
-        /
-        <li><a class="nav-link" href="/projets" on:mouseover="{handleMouseOver}">Projets</a></li>
-        /
-        <li><a class="nav-link" href="/experiences" on:mouseover="{handleMouseOver}">Experiences</a></li>
-        /
-        <li><a class="nav-link" href="/contact" on:mouseover="{handleMouseOver}">Contact</a></li>
+        {#each navRoutes as route, i}
+            <li><a class="nav-link" href={route.href} on:mouseover="{handleMouseOver}">{route.label}</a></li>
+            {#if i !== navRoutes.length - 1}
+                /
+            {/if}
+        {/each}
     </ul>
 </nav>
 
@@ -32,7 +31,7 @@
         width: 100%;
     }
 
-    .logo img{
+    .logo img {
         margin-left: 100px;
         max-height: 200px;
     }
