@@ -1,0 +1,58 @@
+<script>
+    import logo from '$lib/assets/logoTransparent.png';
+    import {mixText} from '$lib/animations/textMixing.js';
+
+    function handleMouseOver(event) {
+        mixText(event.target);
+    }
+</script>
+
+<nav class="navbar">
+    <a class="logo" href="/"><img src={logo} alt="logo Ulysse Guillot"></a>
+
+    <ul class="nav-links">
+        <li><a class="nav-link" href="/competences" on:mouseover="{handleMouseOver}">Compétences</a></li>
+        /
+        <li><a class="nav-link" href="/formation" on:mouseover="{handleMouseOver}">Formation</a></li>
+        /
+        <li><a class="nav-link" href="/projets" on:mouseover="{handleMouseOver}">Projets</a></li>
+        /
+        <li><a class="nav-link" href="/experiences" on:mouseover="{handleMouseOver}">Experiences</a></li>
+        /
+        <li><a class="nav-link" href="/contact" on:mouseover="{handleMouseOver}">Contact</a></li>
+    </ul>
+</nav>
+
+<style>
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #d6ff2e;
+        width: 100%;
+    }
+
+    .logo img{
+        margin-left: 100px;
+        max-height: 200px;
+    }
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+        border-bottom: 2px solid #000000;
+        padding: 0 0 10px 0;
+    }
+
+    .nav-link {
+        margin: 0 20px;
+        text-decoration: none;
+        color: #000000;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .nav-link:hover {
+        color: #00000080;
+    }
+</style>
