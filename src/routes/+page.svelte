@@ -1,7 +1,44 @@
-<h3>The Odyssey Of a Numeric Expert</h3>
-<h1>Ulysse Guillot</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Morbi non arcu risus quis varius quam
-    quisque. Quis blandit turpis cursus in hac habitasse platea. Mattis nunc sed blandit libero volutpat sed cras
-    ornare. Cursus in hac habitasse platea dictumst quisque sagittis purus. Magnis dis parturient montes nascetur.
-    Dictum non consectetur a erat. Dignissim suspendisse in est ante in. </p>
+<div class="presentation">
+    <div class="infos">
+        <div class="slogan">The Odyssey Of a Numeric Expert</div>
+        <div class="name"> Ulysse GUILLOT</div>
+    </div>
+
+    <p class="description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+    </p>
+</div>
+
+<style>
+    .presentation {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .infos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slogan {
+        font-size: 30px;
+        font-style: italic;
+    }
+
+    .name {
+        font-size: 80px;
+        letter-spacing: 8px;
+    }
+
+    .description {
+        padding-inline: 30%;
+    }
+</style>
