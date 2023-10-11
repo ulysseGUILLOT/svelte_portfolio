@@ -20,6 +20,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
+        margin-top: 50px;
     }
 
     .infos {

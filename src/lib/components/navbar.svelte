@@ -1,8 +1,7 @@
 <script>
     import logo from '$lib/assets/logoTransparent.png';
-    import {mixText} from '$lib/modules/textMixing.js';
+    import {mixText} from '$lib/modules/linkHoover.js';
     import navRoutes from '$lib/navRoutes.js';
-    import Navbar from "$lib/components/navbar.svelte";
 
     function handleMouseOver(event) {
         mixText(event.target);
