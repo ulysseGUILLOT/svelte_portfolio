@@ -5,7 +5,7 @@
 
 <section class="home">
     <!-- svelte-ignore a11y-media-has-caption -->
-    <video width="100%" loop="true" autoplay class="bg-video">
+    <video loop="true"  muted autoplay class="bg-video">
         <source src={video} type="video/mp4">
     </video>
 
@@ -39,6 +39,10 @@
 
     .bg-video {
         position: absolute;
+        bottom: 0;
+        right: 0;
+        min-width: 100vw;
+        min-height: 100vh;
         z-index: 0;
     }
 
