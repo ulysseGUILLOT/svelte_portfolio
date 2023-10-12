@@ -1,7 +1,6 @@
 <script>
     import { onMount } from 'svelte';
     import Navbar from '$lib/components/navbar.svelte';
-    import Footer from '$lib/components/footer.svelte';
     import 'bootstrap-icons/font/bootstrap-icons.css'
 
     onMount(async () => {
@@ -10,9 +9,8 @@
 </script>
 
 <div class="main-container">
-    <Navbar />
     <slot />
-    <Footer />
+    <Navbar />
 </div>
 
 <style>

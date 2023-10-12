@@ -31,6 +31,7 @@ html.lenis {
 
 html, body {
     height: 100%;
+    background-color: #18211f;
 }
 
 .svelte {

@@ -23,10 +23,10 @@
 
 <style>
     .navbar {
+        position: absolute;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        background-color: #d6ff2e;
         width: 100%;
     }
 
@@ -38,19 +38,20 @@
     .nav-links {
         display: flex;
         list-style: none;
-        border-bottom: 2px solid #000000;
+        border-bottom: 2px solid #ffffff;
+        color: #ffffff;
         padding: 0 0 10px 0;
     }
 
     .nav-link {
         margin: 0 20px;
         text-decoration: none;
-        color: #000000;
+        color: #ffffff;
         font-size: 20px;
         font-weight: 400;
     }
 
     .nav-link:hover {
-        color: #00000080;
+        color: #ffffff90;
     }
 </style>
