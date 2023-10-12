@@ -1,5 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap');
 
+/*-------------- Locomotive scroll --------------*/
+html.lenis {
+    //height: auto
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none
+}
+
+/*-----------------------------------------------*/
+
 * {
     margin: 0;
     font-family: 'Space Grotesk', sans-serif;

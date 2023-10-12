@@ -1,7 +1,12 @@
 <script>
+    import { onMount } from 'svelte';
     import Navbar from '$lib/components/navbar.svelte';
     import Footer from '$lib/components/footer.svelte';
     import 'bootstrap-icons/font/bootstrap-icons.css'
+
+    onMount(async () => {
+        const locomotiveScroll = await import('$lib/modules/locomotiveScroll.js');
+    });
 </script>
 
 <div class="main-container">

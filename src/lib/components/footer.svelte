@@ -12,10 +12,15 @@
 </script>
 
 <div class="footer-logos">
-    <i class="bi bi-linkedin" on:mouseover="{handleMouseOver}" on:mouseout="{handleMouseOut}"></i>
-    <i class="bi bi-github" on:mouseover="{handleMouseOver}" on:mouseout="{handleMouseOut}"></i>
-    <i class="bi bi-twitter-x" on:mouseover="{handleMouseOver}" on:mouseout="{handleMouseOut}"></i>
-
+    <a class="footer-logo-link" href="https://www.linkedin.com/in/ulysse-guillot/" target="_blank">
+        <i class="bi bi-linkedin" on:mouseover="{handleMouseOver}" on:mouseout="{handleMouseOut}"></i>
+    </a>
+    <a class="footer-logo-link" href="https://github.com/ulysseGUILLOT" target="_blank">
+        <i class="bi bi-github" on:mouseover="{handleMouseOver}" on:mouseout="{handleMouseOut}"></i>
+    </a>
+    <a class="footer-logo-link" href="https://twitter.com/UlysseGuillot" target="_blank">
+        <i class="bi bi-twitter-x" on:mouseover="{handleMouseOver}" on:mouseout="{handleMouseOut}"></i>
+    </a>
 </div>
 
 <style>
@@ -24,6 +29,10 @@
         justify-content: center;
         margin-top: 100px;
         margin-bottom: 20px;
+    }
+
+    .footer-logo-link {
+        text-decoration: none;
     }
 
     .bi {
