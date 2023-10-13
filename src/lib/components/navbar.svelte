@@ -31,7 +31,7 @@
     }
 
     .logo img {
-        margin-left: 100px;
+        //margin-left: 100px;
         max-height: 200px;
     }
 

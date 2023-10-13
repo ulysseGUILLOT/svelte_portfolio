@@ -1,6 +1,6 @@
 <script>
     function handleMouseOver(event) {
-        event.target.style.backgroundColor = '#ffffff';
+        event.target.style.backgroundColor = '#ffffff30';
         event.target.style.color = '#000000';
         event.target.style.transition = 'background-color 0.3s, color 0.3s';
     }
@@ -29,6 +29,9 @@
         justify-content: center;
         margin-top: 100px;
         margin-bottom: 20px;
+        position: absolute;
+        bottom: 0;
+        transform: translate(-50%);
     }
 
     .footer-logo-link {
