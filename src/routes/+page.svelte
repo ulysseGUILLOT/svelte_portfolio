@@ -24,9 +24,8 @@
             laborum.
         </p>
     </div>
-    <Footer/>
 </section>
-
+<Footer/>
 
 
 
