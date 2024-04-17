@@ -1,5 +1,4 @@
-export function mixText(button) {
-    let oldText = button.textContent;
+export function mixText(button, oldText) {
     let letters = oldText.split('');
 
     let interval = setInterval(function () {

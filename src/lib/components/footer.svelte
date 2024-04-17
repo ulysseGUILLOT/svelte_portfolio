@@ -1,12 +1,12 @@
 <script>
     function handleMouseOver(event) {
-        event.target.style.backgroundColor = '#ffffff30';
+        event.target.style.backgroundColor = '#ffffff';
         event.target.style.color = '#000000';
         event.target.style.transition = 'background-color 0.3s, color 0.3s';
     }
 
     function handleMouseOut(event) {
-        event.target.style.backgroundColor = '#000000';
+        event.target.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
         event.target.style.color = '#ffffff';
     }
 </script>
@@ -25,13 +25,11 @@
 
 <style>
     .footer-logos {
+        position: absolute;
+        bottom: 50px;
         display: flex;
         justify-content: center;
-        margin-top: 100px;
-        margin-bottom: 20px;
-        position: absolute;
-        bottom: 0;
-        transform: translate(-50%);
+        width: 100%;
     }
 
     .footer-logo-link {
@@ -43,11 +41,10 @@
         justify-content: center;
         align-items: center;
         font-size: 20px;
-        border: 2px solid #000000;
-        background-color: #000000;
+        background-color: rgba(255, 255, 255, 0.3);
         color: #ffffff;
         border-radius: 50%;
-        padding: 8px;
+        padding: 10px;
         margin: 10px;
         width: 30px;
         height: 30px;

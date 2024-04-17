@@ -3,8 +3,8 @@
     import {mixText} from '$lib/modules/linkHoover.js';
     import navRoutes from '$lib/navRoutes.js';
 
-    function handleMouseOver(event) {
-        mixText(event.target);
+    function handleMouseOver(event, oldText) {
+        mixText(event.target, oldText);
     }
 </script>
 
@@ -13,7 +13,7 @@
 
     <ul class="nav-links">
         {#each navRoutes as route, i}
-            <li><a class="nav-link" href={route.href} on:mouseover="{handleMouseOver}">{route.label}</a></li>
+            <li><a class="nav-link" href={route.href} on:mouseover="{(event) => handleMouseOver(event, route.label)}">{route.label}</a></li>
             {#if i !== navRoutes.length - 1}
                 /
             {/if}
@@ -24,6 +24,7 @@
 <style>
     .navbar {
         position: absolute;
+        top: 20px;
         display: flex;
         justify-content: space-around;
         align-items: center;

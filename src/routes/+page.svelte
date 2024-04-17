@@ -77,10 +77,5 @@
     .description {
         mix-blend-mode: difference;
         color: #ffffff;
-        //padding-inline: 30%;
-    }
-
-    Footer {
-        z-index: 1;
     }
 </style>

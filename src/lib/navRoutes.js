@@ -1,15 +1,11 @@
 const routes = [
     {
-        href: '/competences',
-        label: 'Compétences'
-    },
-    {
-        href: '/formation',
-        label: 'Formation'
-    },
-    {
         href: '/projets',
         label: 'Projets'
+    },
+    {
+        href: '/apropos',
+        label: 'À propos'
     },
     {
         href: '/experiences',
