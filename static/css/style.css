@@ -2,11 +2,11 @@
 
 /*-------------- Locomotive scroll --------------*/
 html.lenis {
-    //height: auto
+    /*height: auto*/
 }
 
 .lenis.lenis-smooth {
-    scroll-behavior: auto
+    scroll-behavior: auto !important;
 }
 
 .lenis.lenis-smooth [data-lenis-prevent] {
@@ -32,9 +32,11 @@ html.lenis {
 
 html, body {
     height: 100%;
-    background-color: #18211f;
+    background-color: #000000;
 }
 
 .svelte {
+    display: flex;
+    flex-direction: column;
     height: 100%;
 }

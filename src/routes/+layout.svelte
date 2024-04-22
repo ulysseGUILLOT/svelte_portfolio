@@ -1,6 +1,5 @@
 <script>
     import { onMount } from 'svelte';
-    import Navbar from '$lib/components/navbar.svelte';
     import 'bootstrap-icons/font/bootstrap-icons.css'
 
     onMount(async () => {
@@ -8,16 +7,4 @@
     });
 </script>
 
-<div class="main-container">
-    <slot />
-    <Navbar />
-</div>
-
-<style>
-    .main-container {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        align-items: center;
-    }
-</style>
+<slot />

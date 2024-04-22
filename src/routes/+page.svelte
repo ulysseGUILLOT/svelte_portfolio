@@ -1,29 +1,25 @@
 <script>
+    import Navbar from '$lib/components/navbar.svelte';
     import video from "$lib/assets/video/background.mp4";
     import Footer from "$lib/components/footer.svelte";
 </script>
 
-<section class="home">
-    <!-- svelte-ignore a11y-media-has-caption -->
-    <video loop="true"  muted autoplay class="bg-video">
-        <source src={video} type="video/mp4">
-    </video>
+<!-- svelte-ignore a11y-media-has-caption -->
+<video loop="true" muted autoplay class="bg-video">
+    <source src={video} type="video/mp4">
+</video>
 
-
-    <div class="presentation">
-        <p class="name">Ulysse Guillot</p>
-        <p class="description">
-            Je suis développeur logiciel, UX/UI designer & développeur web fullstack
-        </p>
-    </div>
-</section>
+<Navbar />
+<div class="presentation">
+    <p class="name">Ulysse Guillot</p>
+    <p class="description">
+        Je suis développeur logiciel, UX/UI designer & développeur web fullstack
+    </p>
+</div>
 <Footer/>
 
 
-
 <style>
-    .home {
-    }
 
     .bg-video {
         position: absolute;

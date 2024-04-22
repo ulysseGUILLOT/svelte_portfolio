@@ -2,8 +2,8 @@ import LocomotiveScroll from 'locomotive-scroll';
 
 export const locomotiveScroll = new LocomotiveScroll({
     lenisOptions: {
-        wrapper: window,
-        content: document.documentElement,
+        wrapper: document.getElementById("scrollContainer"),
+        content: document.getElementById("scrollContainer"),
         lerp: 0.1,
         duration: 1,
         orientation: 'vertical',

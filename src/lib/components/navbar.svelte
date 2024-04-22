@@ -23,12 +23,12 @@
 
 <style>
     .navbar {
-        position: absolute;
-        top: 20px;
+        z-index: 1;
         display: flex;
         justify-content: space-around;
         align-items: center;
         width: 100%;
+        padding-top: 20px;
     }
 
     .logo img {
