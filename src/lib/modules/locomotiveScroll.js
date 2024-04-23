@@ -5,7 +5,7 @@ export const locomotiveScroll = new LocomotiveScroll({
         wrapper: document.getElementById("scrollContainer"),
         content: document.getElementById("scrollContainer"),
         lerp: 0.1,
-        duration: 1,
+        duration: 2,
         orientation: 'vertical',
         gestureOrientation: 'vertical',
         smoothWheel: true,
