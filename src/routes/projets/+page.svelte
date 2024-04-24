@@ -1,8 +1,15 @@
 <script>
     import Navbar from '$lib/components/navbar.svelte';
+    import projects from '$lib/projects.js'
 
-    let nbParagraph = 12;
+    let details = '';
+    projects.forEach(p => p.selected = false);
 
+    function displayDetails(index) {
+        details = projects[index].details;
+        projects.forEach(p => p.selected = false); // réinitialise tous les autres projets
+        projects[index].selected = true;
+    }
 </script>
 
 <Navbar/>
@@ -10,29 +17,25 @@
     <div class="projectsList">
         <h3 class="subtitle">PROJETS</h3>
         <div class="projectsScrollable" id="scrollContainer">
-            {#each Array.from({length: nbParagraph}, (_, i) => i) as i}
-                <p class="project">
-                    Lorem ipsum dolor sit amet
-                </p>
+            {#each projects as project,i }
+                <div class="separator"></div>
+                <button class="project" class:selected={project.selected} on:click={() => displayDetails(i)}>
+                    <span class="title">{project.title}</span>
+                    <span class="type">{project.type}</span>
+                </button>
             {/each}
             <div class="shadow"></div>
         </div>
     </div>
 
 
-    <div class="projectDescription">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
-        </p>
+    <div class="projectDetails">
+        {#if details}
+            <h3 class="subtitle">DÉTAILS</h3>
+            <div class="detailsContent">
+                {details}
+            </div>
+        {/if}
     </div>
 </div>
 
@@ -58,23 +61,61 @@
     .subtitle {
         margin-bottom: 20px;
         font-size: 25px;
-        color: #9d9d9d;
+        color: rgba(187, 184, 184, 0.7);
     }
 
     .projectsScrollable {
+        display: flex;
+        flex-direction: column;
         flex-grow: 1;
-        overflow-y: scroll ;
+        overflow-y: scroll;
         scrollbar-width: none !important;
     }
 
-    .project {
-        padding: 25px 0 25px 0;
-        color: #ffffff;
+    .separator {
         border-top: 2px solid #9d9d9d;
     }
 
+    .project {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+        font-size: 18px;
+        padding: 25px 0 25px 0;
+        color: #ffffff;
+        border: none;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .title {
+        transition: transform 0.5s ease;
+    }
+
+    .type {
+        font-size: 14px;
+        color: #9d9d9d;
+    }
+
     .project:hover {
-        color: #ab4eee;
+        cursor: pointer;
+    }
+
+    .project:hover .title {
+        color: rgba(36, 255, 197, 1);
+        transform: translateX(20px) scale(120%);
+    }
+
+    .project:hover .type {
+        color: rgba(36, 255, 197, 0.5);
+    }
+
+    .project.selected .title {
+        color: rgba(36, 255, 197, 1);
+        transform: translateX(20px) scale(120%);
+    }
+
+    .project.selected .type {
+        color: rgba(36, 255, 197, 0.5);
     }
 
     .shadow {
@@ -86,9 +127,15 @@
         background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
     }
 
-    .projectDescription {
+    .projectDetails {
+        display: flex;
+        flex-direction: column;
         padding: 0 5% 0 5%;
         width: 70%;
         color: #ffffff;
+    }
+
+    .detailsContent {
+        flex-grow: 1;
     }
 </style>
