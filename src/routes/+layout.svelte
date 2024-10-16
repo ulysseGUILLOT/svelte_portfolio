@@ -7,5 +7,8 @@
         const locomotiveScroll = await import('$lib/modules/locomotiveScroll.js');
     });
 </script>
+<svelte:head>
+    <title>Ulysse GUILLOT</title>
+</svelte:head>
 <Noise />
 <slot />

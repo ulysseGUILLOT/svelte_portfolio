@@ -106,6 +106,6 @@
         height: 100%;
 
         pointer-events: none;
-        opacity: .04;
+        opacity: .1;
     }
 </style>
